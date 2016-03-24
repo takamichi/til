@@ -1,5 +1,7 @@
-MySQL5.7のJSONカラムの内容で検索
-=============================
+Database
+========
+
+## JSONカラムの内容で検索
 
 Laravel 5.2.23 からJSONカラムの内容に対してQuery Builderで指定ができるようになるぽい。
 
@@ -28,4 +30,14 @@ whereのカラム名指定に
 のフォーマットの文字列で記述する。
 
 
-2016/03/12 01:54 現在、まだ5.2.23はリリースされてない。
+## whereIn()で配列と同じ順序で取得する(MySQL)
+
+```php
+<?php
+$idList = [20, 30, 10];
+
+$records = \DB::table('accounts')
+            ->whereIn('id', $idList)
+            ->orderByRaw('FIELD(`id`, ' . implode(',', $idList) . ')')
+            ->get();
+```
