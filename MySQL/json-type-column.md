@@ -22,3 +22,7 @@ SELECT JSON_EXTRACT(doc, $.last_name) as 'last name' FROM persons;
 |---|---|
 | 1 | Yamada  |
 | 2 | Suzuki  |
+
+
+## 要素の順序について
+配列`[]`の順序は保持されるが、オブジェクト`{}`の場合、添字でソートされる。
