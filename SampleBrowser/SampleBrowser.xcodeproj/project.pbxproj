@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B5522E920F4FC3700A71296 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5522E720F4FC3700A71296 /* NewsCell.swift */; };
+		5B5522EA20F4FC3700A71296 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5522E820F4FC3700A71296 /* NewsCell.xib */; };
 		5B606C8F20F394720009B1AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B606C8E20F394720009B1AA /* AppDelegate.swift */; };
 		5B606C9420F394720009B1AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B606C9220F394720009B1AA /* Main.storyboard */; };
 		5B606C9620F394730009B1AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B606C9520F394730009B1AA /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B5522E720F4FC3700A71296 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		5B5522E820F4FC3700A71296 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		5B606C8B20F394720009B1AA /* SampleBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B606C8E20F394720009B1AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B606C9320F394720009B1AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 			children = (
 				5B606C8E20F394720009B1AA /* AppDelegate.swift */,
 				5B606C9220F394720009B1AA /* Main.storyboard */,
+				5B5522E720F4FC3700A71296 /* NewsCell.swift */,
+				5B5522E820F4FC3700A71296 /* NewsCell.xib */,
 				5B606C9520F394730009B1AA /* Assets.xcassets */,
 				5B606C9720F394730009B1AA /* LaunchScreen.storyboard */,
 				5B606C9A20F394730009B1AA /* Info.plist */,
@@ -124,6 +130,7 @@
 			files = (
 				5B606C9920F394730009B1AA /* LaunchScreen.storyboard in Resources */,
 				5B606C9620F394730009B1AA /* Assets.xcassets in Resources */,
+				5B5522EA20F4FC3700A71296 /* NewsCell.xib in Resources */,
 				5B606C9420F394720009B1AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B606C8F20F394720009B1AA /* AppDelegate.swift in Sources */,
+				5B5522E920F4FC3700A71296 /* NewsCell.swift in Sources */,
 				5B606CA120F3956A0009B1AA /* NewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
