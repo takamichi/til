@@ -12,12 +12,15 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var tableView: UITableView!
 
+    var dataList: [SampleModel] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let nib = UINib(nibName: "NewsCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "NewsCell")
-        // Do any additional setup after loading the view.
+
+        reloadListDatas()
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,9 +43,44 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
 
                 return
             }
+
+            guard let jsonData: Data = data else {
+                let controller: UIAlertController = UIAlertController(title: nil, message: "エラーが発生しました。", preferredStyle: .alert)
+                controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(controller, animated: true, completion: nil)
+
+                return
+            }
+
+            self.dataList = try! JSONDecoder().decode([SampleModel].self, from: jsonData)
+
+            DispatchQueue.main.async {
+                // 最新のデータに更新
+                self.tableView.reloadData()
+            }
         }
 
         task.resume()
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // 1セクション
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // 取得データ数のセル表示
+        return dataList.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: NewsCell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsCell
+        let data = dataList[indexPath.row]
+
+        cell.dateLabel.text = data.date
+        cell.titleLabel.text = data.title.rendered
+
+        return cell
     }
 
     /*
