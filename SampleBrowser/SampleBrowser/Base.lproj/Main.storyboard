@@ -15,7 +15,7 @@
         <scene sceneID="F9f-7H-wgd">
             <objects>
                 <viewController id="H5F-2p-5gR" customClass="NewsViewController" customModule="SampleBrowser" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="SpV-K9-e1u" customClass="News">
+                    <view key="view" contentMode="scaleToFill" id="SpV-K9-e1u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -69,6 +69,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="MgY-JD-eeW"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1xd-Fh-uVD">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
