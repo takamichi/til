@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class NewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -83,6 +84,19 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // セルの選択解除
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        let data = dataList[indexPath.row]
+        
+        if let url = URL(string: data.link) {
+            let controller: SFSafariViewController = SFSafariViewController(url: url)
+            // 次の画面に遷移
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
