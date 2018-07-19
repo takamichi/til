@@ -77,7 +77,7 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell: NewsCell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsCell
         let data = dataList[indexPath.row]
 
-        cell.dateLabel.text = data.date
+        cell.dateLabel.text = data.dateString
         cell.titleLabel.text = data.title.rendered
 
         return cell
