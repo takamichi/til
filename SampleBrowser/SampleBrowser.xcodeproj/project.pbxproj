@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B40B69A2102082800AAABD4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40B6992102082800AAABD4 /* SearchViewController.swift */; };
+		5B40B69C21020A6B00AAABD4 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40B69B21020A6B00AAABD4 /* SearchResultViewController.swift */; };
 		5B5522E920F4FC3700A71296 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5522E720F4FC3700A71296 /* NewsCell.swift */; };
 		5B5522EA20F4FC3700A71296 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5522E820F4FC3700A71296 /* NewsCell.xib */; };
 		5B5522EC20F6435C00A71296 /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5522EB20F6435C00A71296 /* SampleModel.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B40B6992102082800AAABD4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		5B40B69B21020A6B00AAABD4 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		5B5522E720F4FC3700A71296 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		5B5522E820F4FC3700A71296 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		5B5522EB20F6435C00A71296 /* SampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleModel.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 				5B606C9720F394730009B1AA /* LaunchScreen.storyboard */,
 				5B606C9A20F394730009B1AA /* Info.plist */,
 				5B606CA020F3956A0009B1AA /* NewsViewController.swift */,
+				5B40B6992102082800AAABD4 /* SearchViewController.swift */,
+				5B40B69B21020A6B00AAABD4 /* SearchResultViewController.swift */,
 				5B5522EB20F6435C00A71296 /* SampleModel.swift */,
 			);
 			path = SampleBrowser;
@@ -145,9 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B40B69A2102082800AAABD4 /* SearchViewController.swift in Sources */,
 				5B606C8F20F394720009B1AA /* AppDelegate.swift in Sources */,
 				5B5522E920F4FC3700A71296 /* NewsCell.swift in Sources */,
 				5B606CA120F3956A0009B1AA /* NewsViewController.swift in Sources */,
+				5B40B69C21020A6B00AAABD4 /* SearchResultViewController.swift in Sources */,
 				5B5522EC20F6435C00A71296 /* SampleModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
