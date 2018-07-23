@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B01E7E52106191800275005 /* NotificationSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01E7E42106191800275005 /* NotificationSettingViewController.swift */; };
 		5B40B69A2102082800AAABD4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40B6992102082800AAABD4 /* SearchViewController.swift */; };
 		5B40B69C21020A6B00AAABD4 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40B69B21020A6B00AAABD4 /* SearchResultViewController.swift */; };
 		5B5522E920F4FC3700A71296 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5522E720F4FC3700A71296 /* NewsCell.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B01E7E42106191800275005 /* NotificationSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingViewController.swift; sourceTree = "<group>"; };
 		5B40B6992102082800AAABD4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5B40B69B21020A6B00AAABD4 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		5B5522E720F4FC3700A71296 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				5B606CA020F3956A0009B1AA /* NewsViewController.swift */,
 				5B40B6992102082800AAABD4 /* SearchViewController.swift */,
 				5B40B69B21020A6B00AAABD4 /* SearchResultViewController.swift */,
+				5B01E7E42106191800275005 /* NotificationSettingViewController.swift */,
 				5B5522EB20F6435C00A71296 /* SampleModel.swift */,
 			);
 			path = SampleBrowser;
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B01E7E52106191800275005 /* NotificationSettingViewController.swift in Sources */,
 				5B40B69A2102082800AAABD4 /* SearchViewController.swift in Sources */,
 				5B606C8F20F394720009B1AA /* AppDelegate.swift in Sources */,
 				5B5522E920F4FC3700A71296 /* NewsCell.swift in Sources */,

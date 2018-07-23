@@ -37,14 +37,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qQ6-wU-wHN"/>
                     </view>
-                    <navigationItem key="navigationItem" id="h58-Fh-6Lb"/>
+                    <navigationItem key="navigationItem" id="h58-Fh-6Lb">
+                        <barButtonItem key="rightBarButtonItem" title="通知設定" style="done" id="tP3-Kl-zqb">
+                            <connections>
+                                <action selector="onNotificationButtonTapped:" destination="zHH-bx-V7J" id="swW-2k-oYB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="du5-XF-E6G" id="BCs-v6-IhP"/>
+                        <segue destination="fFT-Aw-zGX" kind="presentation" identifier="MoveNotificationSettingView" id="8ev-XB-qWw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAd-BR-9oO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2444" y="-30.134932533733135"/>
+            <point key="canvasLocation" x="2444" y="-30"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9sS-7r-FPh">
@@ -93,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8I7-xO-fhV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2440.8000000000002" y="740.7796101949026"/>
+            <point key="canvasLocation" x="2444" y="741"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="w4e-mn-S22">
@@ -114,6 +121,22 @@
             </objects>
             <point key="canvasLocation" x="508" y="345"/>
         </scene>
+        <!--Notification Setting View Controller-->
+        <scene sceneID="OH8-r6-5zs">
+            <objects>
+                <viewController id="VXF-mV-gKP" customClass="NotificationSettingViewController" customModule="SampleBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v4a-yU-5CY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Krf-5N-c4F"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Oy3-k9-ULq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vW0-Yo-fJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1505" y="-898"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="pBf-VN-nUz">
             <objects>
@@ -131,7 +154,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hLV-m3-ALr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1501.5999999999999" y="740.7796101949026"/>
+            <point key="canvasLocation" x="1505" y="741"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3a6-IW-JxY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fFT-Aw-zGX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LOh-WT-DNq">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VXF-mV-gKP" kind="relationship" relationship="rootViewController" id="eQu-Ip-76Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MeC-pa-7qE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="508" y="-897"/>
         </scene>
     </scenes>
 </document>

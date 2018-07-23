@@ -29,7 +29,11 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func onNotificationButtonTapped(_ sender: UIBarButtonItem) {
+        // 通知設定画面に遷移
+        performSegue(withIdentifier: "MoveNotificationSettingView", sender: nil)
+    }
+    
     func reloadListDatas() {
         // セッション用のデフォルト設定
         let config = URLSessionConfiguration.default
