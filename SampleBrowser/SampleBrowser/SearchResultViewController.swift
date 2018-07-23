@@ -139,6 +139,15 @@ class SearchResultViewController: UITableViewController, UISearchResultsUpdating
             self.dataList = try! JSONDecoder().decode([SampleModel].self, from: jsonData)
 
             DispatchQueue.main.async {
+                // 検索結果0件ならアラート表示
+                if self.dataList.isEmpty {
+                    let controller: UIAlertController = UIAlertController(title: nil, message: "検索結果がありませんでした", preferredStyle: .alert)
+                    controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(controller, animated: true, completion: nil)
+
+                    return
+                }
+
                 // データ更新
                 self.tableView.reloadData()
             }
