@@ -128,14 +128,49 @@
                     <view key="view" contentMode="scaleToFill" id="v4a-yU-5CY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通知の設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgc-Fe-e8Q">
+                                <rect key="frame" x="16" y="80" width="278" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gBa-Et-hfh">
+                                <rect key="frame" x="310" y="74" width="51" height="31"/>
+                            </switch>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Dzv-4j-haj">
+                                <rect key="frame" x="0.0" y="149" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="554133454.699687">
+                                    <!--2018-07-24 13:57:34 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEu-dr-0LG">
+                                <rect key="frame" x="148.5" y="394" width="77" height="30"/>
+                                <state key="normal" title="通知を設定"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bgc-Fe-e8Q" firstAttribute="top" secondItem="Krf-5N-c4F" secondAttribute="top" constant="16" id="1gb-cK-lML"/>
+                            <constraint firstItem="gBa-Et-hfh" firstAttribute="centerY" secondItem="Bgc-Fe-e8Q" secondAttribute="centerY" id="LL4-aB-Qqe"/>
+                            <constraint firstItem="Bgc-Fe-e8Q" firstAttribute="leading" secondItem="Krf-5N-c4F" secondAttribute="leading" constant="16" id="N0z-bh-oC8"/>
+                            <constraint firstItem="Dzv-4j-haj" firstAttribute="leading" secondItem="Krf-5N-c4F" secondAttribute="leading" id="aDH-lk-Vy9"/>
+                            <constraint firstItem="Dzv-4j-haj" firstAttribute="top" secondItem="Bgc-Fe-e8Q" secondAttribute="bottom" constant="48" id="aR6-Yz-ckB"/>
+                            <constraint firstItem="Krf-5N-c4F" firstAttribute="trailing" secondItem="gBa-Et-hfh" secondAttribute="trailing" constant="16" id="doj-GK-Ycp"/>
+                            <constraint firstItem="xEu-dr-0LG" firstAttribute="top" secondItem="Dzv-4j-haj" secondAttribute="bottom" constant="29" id="gkI-ng-wfo"/>
+                            <constraint firstItem="gBa-Et-hfh" firstAttribute="leading" secondItem="Bgc-Fe-e8Q" secondAttribute="trailing" constant="16" id="qyu-aA-sDe"/>
+                            <constraint firstItem="Dzv-4j-haj" firstAttribute="trailing" secondItem="Krf-5N-c4F" secondAttribute="trailing" id="rx8-DO-mYB"/>
+                            <constraint firstItem="xEu-dr-0LG" firstAttribute="centerX" secondItem="v4a-yU-5CY" secondAttribute="centerX" id="ukf-c1-Sky"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Krf-5N-c4F"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Oy3-k9-ULq"/>
+                    <navigationItem key="navigationItem" id="Oy3-k9-ULq">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="r52-oG-vta"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vW0-Yo-fJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1505" y="-898"/>
+            <point key="canvasLocation" x="1504.8" y="-898.2008995502249"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pBf-VN-nUz">
