@@ -80,7 +80,7 @@ class NotificationSettingViewController: UIViewController {
 
                     let controller = UIAlertController(
                         title: nil,
-                        message: "\(dateComponents.hour!):\(dateComponents.minute)に通知する設定を行いました。",
+                        message: "\(dateComponents.hour!):\(dateComponents.minute!)に通知する設定を行いました。",
                         preferredStyle: .alert
                     )
                     controller.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
