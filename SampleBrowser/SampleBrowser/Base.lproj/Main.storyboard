@@ -137,6 +137,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gBa-Et-hfh">
                                 <rect key="frame" x="310" y="74" width="51" height="31"/>
+                                <connections>
+                                    <action selector="onNotificationSwitchValueChanged:" destination="VXF-mV-gKP" eventType="valueChanged" id="50X-hD-XtX"/>
+                                </connections>
                             </switch>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Dzv-4j-haj">
                                 <rect key="frame" x="0.0" y="149" width="375" height="216"/>
@@ -147,6 +150,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEu-dr-0LG">
                                 <rect key="frame" x="148.5" y="394" width="77" height="30"/>
                                 <state key="normal" title="通知を設定"/>
+                                <connections>
+                                    <action selector="onNotificationButtonTapped:" destination="VXF-mV-gKP" eventType="touchUpInside" id="QcW-Ii-Dlp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -165,8 +171,17 @@
                         <viewLayoutGuide key="safeArea" id="Krf-5N-c4F"/>
                     </view>
                     <navigationItem key="navigationItem" id="Oy3-k9-ULq">
-                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="r52-oG-vta"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="r52-oG-vta">
+                            <connections>
+                                <action selector="onCloseButtonTapped:" destination="VXF-mV-gKP" id="lGt-E2-j3i"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="Dzv-4j-haj" id="Ygn-NH-gLQ"/>
+                        <outlet property="notificationButton" destination="xEu-dr-0LG" id="aXJ-C0-ysW"/>
+                        <outlet property="notificationSwitch" destination="gBa-Et-hfh" id="xsq-J3-bwR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vW0-Yo-fJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
