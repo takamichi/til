@@ -39,6 +39,10 @@ class NotificationSettingViewController: UIViewController {
 
     // UISwitch「通知の設定」を操作したときの処理
     @IBAction func onNotificationSwitchValueChanged(_ sender: UISwitch) {
+    }
+
+    // UIButton「通知を設定」を押したときの処理
+    @IBAction func onNotificationButtonTapped(_ sender: UIButton) {
         let center = UNUserNotificationCenter.current()
         let date = datePicker.date
 
@@ -90,10 +94,6 @@ class NotificationSettingViewController: UIViewController {
                     self.present(controller, animated: true, completion: nil)
                 }
             })
-    }
-
-    // UIButton「通知を設定」を押したときの処理
-    @IBAction func onNotificationButtonTapped(_ sender: UIButton) {
     }
 
     // UIBarButton (閉じる) を押したときの処理
