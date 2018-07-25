@@ -39,6 +39,19 @@ class NotificationSettingViewController: UIViewController {
 
     // UISwitch「通知の設定」を操作したときの処理
     @IBAction func onNotificationSwitchValueChanged(_ sender: UISwitch) {
+        if sender.isOn {
+            datePicker.isEnabled = true
+            notificationButton.isEnabled = true
+        } else {
+            datePicker.isEnabled = false
+            notificationButton.isEnabled = false
+
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+
+            let controller = UIAlertController(title: nil, message: "通知を解除しました", preferredStyle: .alert)
+            controller.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(controller, animated: true, completion: nil)
+        }
     }
 
     // UIButton「通知を設定」を押したときの処理
