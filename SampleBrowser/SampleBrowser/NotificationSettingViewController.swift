@@ -18,7 +18,23 @@ class NotificationSettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.title = "通知設定"
+
+        // デフォルト状態
+        notificationSwitch.isOn = false
+        datePicker.isEnabled = false
+        notificationButton.isEnabled = false
+
+        UNUserNotificationCenter.current().getPendingNotificationRequests(completionHandler: { (requests) in
+            if requests.count > 0 {
+                DispatchQueue.main.async {
+                    self.notificationSwitch.isOn = true
+                    // 有効化
+                    self.datePicker.isEnabled = true
+                    self.notificationButton.isEnabled = true
+                }
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
