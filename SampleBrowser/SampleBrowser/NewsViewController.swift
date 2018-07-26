@@ -18,6 +18,12 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if #available(iOS 11, *) {
+            self.navigationController?.navigationBar.prefersLargeTitles = true
+            self.navigationItem.title = "最新記事"
+            self.navigationItem.largeTitleDisplayMode = .automatic
+        }
+
         let nib = UINib(nibName: "NewsCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "NewsCell")
 
@@ -33,7 +39,7 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         // 通知設定画面に遷移
         performSegue(withIdentifier: "MoveNotificationSettingView", sender: nil)
     }
-    
+
     func reloadListDatas() {
         // セッション用のデフォルト設定
         let config = URLSessionConfiguration.default
@@ -93,14 +99,14 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.deselectRow(at: indexPath, animated: true)
 
         let data = dataList[indexPath.row]
-        
+
         if let url = URL(string: data.link) {
             let controller: SFSafariViewController = SFSafariViewController(url: url)
             // 次の画面に遷移
             self.present(controller, animated: true, completion: nil)
         }
     }
-    
+
     /*
     // MARK: - Navigation
 
