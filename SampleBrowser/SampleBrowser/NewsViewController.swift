@@ -13,6 +13,7 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var tableView: UITableView!
 
+    let refreshControl: UIRefreshControl = UIRefreshControl()
     var dataList: [SampleModel] = []
 
     override func viewDidLoad() {
@@ -27,6 +28,9 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         let nib = UINib(nibName: "NewsCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "NewsCell")
 
+        refreshControl.addTarget(self, action: #selector(refreshReload(_:)), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+
         reloadListDatas()
     }
 
@@ -40,6 +44,10 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         performSegue(withIdentifier: "MoveNotificationSettingView", sender: nil)
     }
 
+    @objc func refreshReload(_ sender: UIRefreshControl) {
+        self.reloadListDatas()
+    }
+
     func reloadListDatas() {
         // セッション用のデフォルト設定
         let config = URLSessionConfiguration.default
@@ -47,18 +55,32 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         let url = URL(string: "https://demo.wp-api.org/wp-json/wp/v2/posts/")
         let task = session.dataTask(with: url!) { (data, response, error) in
             if error != nil {
-                // エラーアラートの表示
-                let controller: UIAlertController = UIAlertController(title: nil, message: "エラーが発生しました。", preferredStyle: .alert)
-                controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                self.present(controller, animated: true, completion: nil)
+                DispatchQueue.main.async {
+                    if self.refreshControl.isRefreshing {
+                        // 引っ張って更新をしていたら、UIの更新表示を元に戻す
+                        self.refreshControl.endRefreshing()
+                    }
+
+                    // エラーアラートの表示
+                    let controller: UIAlertController = UIAlertController(title: nil, message: "エラーが発生しました。", preferredStyle: .alert)
+                    controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(controller, animated: true, completion: nil)
+                }
 
                 return
             }
 
             guard let jsonData: Data = data else {
-                let controller: UIAlertController = UIAlertController(title: nil, message: "エラーが発生しました。", preferredStyle: .alert)
-                controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                self.present(controller, animated: true, completion: nil)
+                DispatchQueue.main.async {
+                    if self.refreshControl.isRefreshing {
+                        // 引っ張って更新をしていたら、UIの更新表示を元に戻す
+                        self.refreshControl.endRefreshing()
+                    }
+
+                    let controller: UIAlertController = UIAlertController(title: nil, message: "エラーが発生しました。", preferredStyle: .alert)
+                    controller.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(controller, animated: true, completion: nil)
+                }
 
                 return
             }
@@ -66,6 +88,11 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.dataList = try! JSONDecoder().decode([SampleModel].self, from: jsonData)
 
             DispatchQueue.main.async {
+                if self.refreshControl.isRefreshing {
+                    // 引っ張って更新をしていたら、UIの更新表示を元に戻す
+                    self.refreshControl.endRefreshing()
+                }
+
                 // 最新のデータに更新
                 self.tableView.reloadData()
             }
