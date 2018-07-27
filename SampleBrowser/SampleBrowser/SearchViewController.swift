@@ -28,7 +28,7 @@ class SearchViewController: UIViewController {
         self.navigationItem.largeTitleDisplayMode = .automatic
 
         // 検索処理クラスを設定
-        searchController.searchResultsUpdater = searchResultViewController
+        searchController.searchBar.delegate = searchResultViewController
     }
 
     override func didReceiveMemoryWarning() {

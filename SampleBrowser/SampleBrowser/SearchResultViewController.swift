@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-class SearchResultViewController: UITableViewController, UISearchResultsUpdating {
+class SearchResultViewController: UITableViewController, UISearchBarDelegate {
 
     var dataList: [SampleModel] = []
 
@@ -102,6 +102,16 @@ class SearchResultViewController: UITableViewController, UISearchResultsUpdating
         if let text = searchController.searchBar.text {
             self.reloadListDatas(text)
         }
+    }
+
+    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn shouldChangeTextInrange: NSRange, replacementText text: String) -> Bool {
+        self.dataList = []
+        self.tableView.reloadData()
+        return true
+    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        reloadListDatas(searchBar.text!)
     }
 
     func reloadListDatas(_ text: String) {
