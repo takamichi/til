@@ -2,7 +2,6 @@
 //  NewsCell.swift
 //  SampleBrowser
 //
-//  Created by Takamichi URATA on 2018/07/10.
 //  Copyright © 2018年 Takamichi URATA. All rights reserved.
 //
 
@@ -24,5 +23,4 @@ class NewsCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

@@ -2,7 +2,6 @@
 //  SampleModel.swift
 //  SampleBrowser
 //
-//  Created by Takamichi URATA on 2018/07/11.
 //  Copyright © 2018年 Takamichi URATA. All rights reserved.
 //
 
