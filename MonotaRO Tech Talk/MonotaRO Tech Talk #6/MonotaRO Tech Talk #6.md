@@ -32,6 +32,8 @@ APIグループでのお話。
 マネージャーにできること
 
 ## モノタロウAIストアの話
+[モノタロウAIストアの話 \- MonotaRO Tech Talk \#6 \(大阪梅田オフィスオープン記念\)](https://www.slideshare.net/monotaro-itd-pr/ai-monotaro-tech-talk-6)
+
 外部システム連携 (OPTiM)
 
 ## これからのモノタロウのIT開発
