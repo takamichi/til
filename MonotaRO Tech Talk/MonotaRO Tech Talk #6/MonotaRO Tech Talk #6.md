@@ -3,6 +3,8 @@
 * [MonotaRO Tech Talk \#6 \(大阪梅田オフィスオープン記念\) \- connpass](https://monotaro.connpass.com/event/93702/)
 
 ## BigQueryを中心とした大規模データ基盤開発
+[BigQueryを中心とした大規模データ基盤開発 \- MonotaRO Tech Talk \#6 \(大阪梅田オフィスオープン記念\)](https://www.slideshare.net/monotaro-itd-pr/bigquery-monotaro-tech-talk-6)
+
 データの種類。商品・顧客・サプライヤやWMS(倉庫管理システム)など。
 RDBテーブルで言えば、1000~
 受注明細だと 1億5000万件以上。
@@ -20,6 +22,8 @@ GSuite と GCP はアカウント連携しているので、GoogleAppsScript の
 Google Data Studio でデータを可視化。
 
 ## チームの戦闘力をガンガンにあげろ！
+[チームの戦闘力をガンガンに上げろ！ \- MonotaRO Tech Talk \#6 \(大阪梅田オフィスオープン記念\)](https://www.slideshare.net/monotaro-itd-pr/monotaro-tech-talk-6)
+
 APIグループでのお話。
 
 課題解決に取り組む前に、キックオフミーティングで「どうなりたいか」をすり合わせ。
