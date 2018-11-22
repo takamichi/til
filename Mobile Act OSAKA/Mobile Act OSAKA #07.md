@@ -7,7 +7,7 @@ Mobile Act OSAKA #07
 
 
 ## usami-k「Xamarin を使った iOS アプリ開発の現場から」
-
+[Xamarin iOS \- Speaker Deck](https://speakerdeck.com/usamik26/xamarin-ios)
 
 ## shohei「仮想通貨アプリを作ったけどAppleReviwerに弾かれた話」
 Appleレビューワーからの国際電話 日本時間19時くらい。
@@ -31,6 +31,8 @@ Opening Line Ventures からリリースした。
 
 
 ## minomata「モバイルアプリ開発に使える設計の話」
+[モバイルアプリ開発に使える設計の話 - Speaker Deck](https://speakerdeck.com/ecoopnet/mobairuapurikai-fa-nishi-erushe-ji-falsehua)
+
 MVVM + Clean Architecture  
 補助: DI, Rx
 
@@ -39,6 +41,8 @@ MVVM + Clean Architecture
 
 
 ## Hiron「4000のワーニングと戦え！これは警告だ！」
+[4000のワーニングと戦え！これは警告だ！ / 4000 Warnings \- Speaker Deck](https://speakerdeck.com/hironytic/4000-warnings)
+
 警告とは、コンパイラ判断でバグではないかと思われる箇所の指摘。  
 Xcode がコンパイル時に出してくれる警告を放置しがち。  
 
@@ -60,6 +64,8 @@ CircleCI を選択。無料でプライベートリポジトリを参照可能(1
 
 
 ## Kenta Nakai「Asset Catalog再入門」
+[Asset Catalog再入門 / Asset Catalog Reintroduction \- Speaker Deck](https://speakerdeck.com/urouro/asset-catalog-reintroduction)
+
 * ベクターイメージ(PDF)を利用可能  
     - iOS11以上、Preserve Vector Data でPDFサイズ以上に拡大しても滲まなくなった。
 * 色の管理 (ColorSet)
