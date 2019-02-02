@@ -1,3 +1,9 @@
 name: MyMap
 options:
   bundleIdPrefix: net.seraphimis
+  xcodeVersion: 9.4
+  deploymentTarget:
+    iOS: "11.4"
+settings:
+  base:
+    IPHONEOS_DEPLOYMENT_TARGET: "11.4"
