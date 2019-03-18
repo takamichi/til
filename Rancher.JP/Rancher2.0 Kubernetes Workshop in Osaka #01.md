@@ -19,3 +19,7 @@ Google社内のオーケストレーションシステムである Borg の実�
 [Let’s unbox Rancher 2\.0 <v2\.0\.0>](https://www.slideshare.net/linecorp/lets-unbox-rancher-20-v200)
 
 weavescope
+
+
+## スライド
+* [Introduction of kubernetes rancher](https://www.slideshare.net/cyberblackvoom/introduction-of-kubernetes-rancher-127758994) 
